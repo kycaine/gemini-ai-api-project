@@ -22,9 +22,8 @@ export const processDocument = async (file) => {
   const filePath = path.resolve(file.path);
   const buffer = fs.readFileSync(filePath);
 
-  const model = genAI.getGenerativeModel({ model: process.env.AI_MODEL });
+  const model = genAI.getGenerativeModel({ model: process.env.AI_MODEL || "gemini-2.5-flash" });
 
-  // generate konten dari dokumen
   const result = await model.generateContent([
     { inlineData: { data: buffer.toString("base64"), mimeType: file.mimetype } },
     { text: "Summarize or describe this document" },

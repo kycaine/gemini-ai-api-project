@@ -20,7 +20,7 @@ export const processImage = async (file, prompt = "Describe this image") => {
   const imageBuffer = fs.readFileSync(filePath);
 
   const model = genAI.getGenerativeModel({
-    model: process.env.AI_MODEL || "gemini-1.5-flash",
+    model: process.env.AI_MODEL || "gemini-2.5-flash",
   });
 
   const result = await model.generateContent([
