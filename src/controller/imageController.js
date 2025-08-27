@@ -9,12 +9,9 @@ export const uploadImageAndDescribe = [
       }
 
       const { prompt } = req.body;
-      const description = await processImage(req.file, prompt);
+      const output = await processImage(req.file, prompt);
 
-      res.json({
-        message: "Image processed successfully",
-        description,
-      });
+      res.json({output});
     } catch (err) {
       console.error("Upload error:", err);
       res.status(500).json({ error: "Something went wrong", details: err.message });

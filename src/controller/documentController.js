@@ -5,12 +5,9 @@ export const uploadDocumentAndDescribe = [
   async (req, res) => {
     try {
         const { prompt } = req.body;
-        const description = await processDocument(req.file, prompt || "Summary this document");
+        const output = await processDocument(req.file, prompt || "Summary this document");
 
-      res.json({
-        message: "Document processed successfully",
-        description,
-      });
+      res.json({output});
     } catch (err) {
       console.error(err);
       res.status(500).json({ error: err.message });

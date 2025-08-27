@@ -6,10 +6,7 @@ export const uploadAndGenerateFromAudio = [
     try {
       const output = await processAudio(req.file);
 
-      res.json({
-        message: "Audio processed successfully",
-        transcription: output,
-      });
+      res.json({output});
     } catch (err) {
       console.error(err);
       res.status(500).json({ error: err.message });
