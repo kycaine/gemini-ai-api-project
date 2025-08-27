@@ -11,7 +11,7 @@ GEMINI_API_KEY=AIxxxxxxxxxxxxxxxxxxxxxxxxxxx
 AI_MODEL=gemini-2.5-flash //default
 ```
 3. install dependencies: run in bash/terminal `npm install`
-4. rub in bash/terminal `npm server.js`
+4. run in bash/terminal `node server.js`
 5. ready to test
 
 # Documentation
