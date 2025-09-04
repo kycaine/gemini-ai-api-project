@@ -15,4 +15,4 @@ AI_MODEL=gemini-2.5-flash //default
 5. ready to test
 
 # Documentation
-here https://documenter.getpostman.com/view/16564652/2sB3HgNhsE
+in docs folder
